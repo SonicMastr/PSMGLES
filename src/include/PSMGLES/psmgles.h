@@ -1,6 +1,7 @@
 #ifndef PSMGLES_H
 #define PSMGLES_H
 
-int psmglInit (void);
+SceBool pglIsInit (void);
+int pglInit (void);
 
 #endif

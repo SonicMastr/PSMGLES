@@ -6,7 +6,7 @@
 int exportEGL(void)
 {
     tai_module_info_t tai_info;
-    if (!getModuleInfo(&tai_info))
+    if (!getModuleInfo(&tai_info))  // 0 on Success
     {
         module_get_offset(tai_info.modid, 0, 0xB418 | 1, &_eglGetDisplay);
         module_get_offset(tai_info.modid, 0, 0xBE48 | 1, &_eglSwapBuffers);
@@ -26,7 +26,7 @@ int exportEGL(void)
 int exportGL(void)
 {
     tai_module_info_t tai_info;
-    if (!getModuleInfo(&tai_info))
+    if (!getModuleInfo(&tai_info))  // 0 on Success
     {
         module_get_offset(tai_info.modid, 0, 0xB4C54 | 1, &_glShaderSource);
         module_get_offset(tai_info.modid, 0, 0xB1BF6 | 1, &_glCreateShader);
@@ -57,7 +57,7 @@ int exportGL(void)
 int exportPGL(void)
 {
     tai_module_info_t tai_info;
-    if (!getModuleInfo(&tai_info))
+    if (!getModuleInfo(&tai_info))  // 0 on Success
     {
         module_get_offset(tai_info.modid, 0, 0xCB20 | 1, &pglContextGLES2GetCurrentContext);
         module_get_offset(tai_info.modid, 0, 0xDD7E | 1, &pglResourceManagerGetResource);

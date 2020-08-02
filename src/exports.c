@@ -47,7 +47,17 @@ int exportGL(void)
         module_get_offset(tai_info.modid, 0, 0xB61DE | 1, &_glVertexAttribPointer);
         module_get_offset(tai_info.modid, 0, 0xB25EE | 1, &_glEnableVertexAttribArray);
         module_get_offset(tai_info.modid, 0, 0xB225C | 1, &_glDrawArrays);
+        module_get_offset(tai_info.modid, 0, 0xB566C | 1, &_glUniform1fv);
+        module_get_offset(tai_info.modid, 0, 0xB578C | 1, &_glUniform1iv);
+        module_get_offset(tai_info.modid, 0, 0xB5898 | 1, &_glUniform2fv);
+        module_get_offset(tai_info.modid, 0, 0xB598E | 1, &_glUniform2iv);
+        module_get_offset(tai_info.modid, 0, 0xB5A82 | 1, &_glUniform3fv);
+        module_get_offset(tai_info.modid, 0, 0xB5B92 | 1, &_glUniform3iv);
         module_get_offset(tai_info.modid, 0, 0xB5C9C | 1, &_glUniform4fv);
+        module_get_offset(tai_info.modid, 0, 0xB5D98 | 1, &_glUniform4iv);
+        module_get_offset(tai_info.modid, 0, 0xB5E8C | 1, &_glUniformMatrix2fv);
+        module_get_offset(tai_info.modid, 0, 0xB5F62 | 1, &_glUniformMatrix3fv);
+        module_get_offset(tai_info.modid, 0, 0xB6044 | 1, &_glUniformMatrix4fv);
         module_get_offset(tai_info.modid, 0, 0xB4672 | 1, &_glGetUniformLocation);
         return 0;
     }

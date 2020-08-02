@@ -22,7 +22,17 @@ GL_APICALL void GL_APIENTRY (*_glUseProgram)(GLuint program);
 GL_APICALL void GL_APIENTRY (*_glVertexAttribPointer)(GLuint index, GLint size, GLenum type, GLboolean normalized, GLsizei stride, const void *pointer);
 GL_APICALL void GL_APIENTRY (*_glEnableVertexAttribArray)(GLuint index);
 GL_APICALL void GL_APIENTRY (*_glDrawArrays)(GLenum mode, GLint first, GLsizei count);
+GL_APICALL void GL_APIENTRY (*_glUniform1fv)(GLint location, GLsizei count, const GLfloat *value);
+GL_APICALL void GL_APIENTRY (*_glUniform1iv)(GLint location, GLsizei count, const GLint *value);
+GL_APICALL void GL_APIENTRY (*_glUniform2fv)(GLint location, GLsizei count, const GLfloat *value);
+GL_APICALL void GL_APIENTRY (*_glUniform2iv)(GLint location, GLsizei count, const GLint *value);
+GL_APICALL void GL_APIENTRY (*_glUniform3fv)(GLint location, GLsizei count, const GLfloat *value);
+GL_APICALL void GL_APIENTRY (*_glUniform3iv)(GLint location, GLsizei count, const GLint *value);
 GL_APICALL void GL_APIENTRY (*_glUniform4fv)(GLint location, GLsizei count, const GLfloat *value);
+GL_APICALL void GL_APIENTRY (*_glUniform4iv)(GLint location, GLsizei count, const GLint *value);
+GL_APICALL void GL_APIENTRY (*_glUniformMatrix2fv)(GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
+GL_APICALL void GL_APIENTRY (*_glUniformMatrix3fv)(GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
+GL_APICALL void GL_APIENTRY (*_glUniformMatrix4fv)(GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
 GL_APICALL GLint GL_APIENTRY (*_glGetUniformLocation)(GLuint program, const GLchar *name);
 
 #endif

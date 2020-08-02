@@ -2,12 +2,16 @@
 #include <stdio.h>
 #include <string.h>
 #include <psp2/sysmodule.h>
+#include "PSMGLES/egl.h"
+#include "PSMGLES/gl.h"
+#include "PSMGLES/pgl.h"
+#include "PSMGLES/psmgles.h"
 #include "PSMGLES/taiutils.h"
 #include "PSMGLES/exports.h"
 
 static SceUID psmID, shacccgID, monoBridgeID;
 
-void patchShacccg (void)
+static void patchShacccg (void)
 {
     uint32_t *g_flag_a;
     uint32_t *g_flag_b;
@@ -48,6 +52,7 @@ int psmglInit (void)
     if (shacccgID < 0)
         return 1;
     patchShacccg();
+    exportAll();
     sceSysmoduleUnloadModule(SCE_SYSMODULE_HTTP);
     sceSysmoduleUnloadModule(SCE_SYSMODULE_NP);
     sceSysmoduleUnloadModule(SCE_SYSMODULE_SSL);

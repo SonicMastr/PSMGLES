@@ -189,7 +189,7 @@ GL_APICALL void GL_APIENTRY glUniform2fv (GLint location, GLsizei count, const G
 	return _glUniform2fv(location, count, value);
 }
 GL_APICALL void GL_APIENTRY glUniform2i (GLint location, GLint v0, GLint v1) {
-    GLfloat v[] = {v0, v1};
+    GLint v[] = {v0, v1};
 	return _glUniform2iv(location, 1, &v);
 }
 GL_APICALL void GL_APIENTRY glUniform2iv (GLint location, GLsizei count, const GLint *value) {
@@ -203,7 +203,7 @@ GL_APICALL void GL_APIENTRY glUniform3fv (GLint location, GLsizei count, const G
 	return _glUniform3fv(location, count, value) ;
 }
 GL_APICALL void GL_APIENTRY glUniform3i (GLint location, GLint v0, GLint v1, GLint v2) {
-    GLfloat v[] = {v0, v1, v2};
+    GLint v[] = {v0, v1, v2};
 	return _glUniform3iv(location, 1, &v);
 }
 GL_APICALL void GL_APIENTRY glUniform3iv (GLint location, GLsizei count, const GLint *value) {
@@ -217,7 +217,7 @@ GL_APICALL void GL_APIENTRY glUniform4fv (GLint location, GLsizei count, const G
 	return _glUniform4fv(location, count, value);
 }
 GL_APICALL void GL_APIENTRY glUniform4i (GLint location, GLint v0, GLint v1, GLint v2, GLint v3) {
-    GLfloat v[] = {v0, v1, v2, v3};
+    GLint v[] = {v0, v1, v2, v3};
 	return _glUniform4iv(location, 1, &v);
 }
 GL_APICALL void GL_APIENTRY glUniform4iv (GLint location, GLsizei count, const GLint *value) {

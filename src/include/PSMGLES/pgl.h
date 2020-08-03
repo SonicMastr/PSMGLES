@@ -8,4 +8,6 @@ void (*pglContextGLES2SetCurrentError)(unsigned int error);
 unsigned int (*pglStringLength)(const char *name);
 char* (*pglPlatformStringCopy)(char *destination, char *source, unsigned int size);
 
+int pglProgramSetAttributeLocation (int context, const char *name, unsigned int index);
+
 #endif

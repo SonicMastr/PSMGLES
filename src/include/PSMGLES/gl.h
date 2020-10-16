@@ -34,5 +34,11 @@ GL_APICALL void GL_APIENTRY (*_glUniformMatrix2fv)(GLint location, GLsizei count
 GL_APICALL void GL_APIENTRY (*_glUniformMatrix3fv)(GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
 GL_APICALL void GL_APIENTRY (*_glUniformMatrix4fv)(GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
 GL_APICALL GLint GL_APIENTRY (*_glGetUniformLocation)(GLuint program, const GLchar *name);
+GL_APICALL void GL_APIENTRY (*_glDisable)(GLenum cap);
+GL_APICALL void GL_APIENTRY (*_glActiveTexture)(GLenum texture);
+GL_APICALL void GL_APIENTRY (*_glBindBuffer)(GLenum target, GLuint buffer);
+GL_APICALL void GL_APIENTRY (*_glBindFramebuffer)(GLenum target, GLuint framebuffer);
+GL_APICALL void GL_APIENTRY (*_glBindRenderbuffer)(GLenum target, GLuint renderbuffer);
+GL_APICALL void GL_APIENTRY (*_glBindTexture)(GLenum target, GLuint texture);
 
 #endif

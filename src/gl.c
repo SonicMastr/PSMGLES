@@ -32,7 +32,16 @@ GL_APICALL void GL_APIENTRY (*_glUniformMatrix2fv)(GLint location, GLsizei count
 GL_APICALL void GL_APIENTRY (*_glUniformMatrix3fv)(GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
 GL_APICALL void GL_APIENTRY (*_glUniformMatrix4fv)(GLint location, GLsizei count, GLboolean transpose, const GLfloat *value);
 GL_APICALL GLint GL_APIENTRY (*_glGetUniformLocation)(GLuint program, const GLchar *name);
+GL_APICALL void GL_APIENTRY (*_glDisable)(GLenum cap);
+GL_APICALL void GL_APIENTRY (*_glActiveTexture)(GLenum texture);
+GL_APICALL void GL_APIENTRY (*_glBindBuffer)(GLenum target, GLuint buffer);
+GL_APICALL void GL_APIENTRY (*_glBindFramebuffer)(GLenum target, GLuint framebuffer);
+GL_APICALL void GL_APIENTRY (*_glBindRenderbuffer)(GLenum target, GLuint renderbuffer);
+GL_APICALL void GL_APIENTRY (*_glBindTexture)(GLenum target, GLuint texture);
 
+GL_APICALL void GL_APIENTRY glActiveTexture (GLenum texture) {
+    return _glActiveTexture(texture);
+}
 GL_APICALL void GL_APIENTRY glAttachShader (GLuint program, GLuint shader) {
     return _glAttachShader(program, shader);
 }
@@ -52,6 +61,18 @@ GL_APICALL void GL_APIENTRY glBindAttribLocation (GLuint program, GLuint index, 
         }
         pglProgramSetAttributeLocation(context, name, index);
     }
+}
+GL_APICALL void GL_APIENTRY glBindBuffer (GLenum target, GLuint buffer) {
+    return _glBindBuffer(target, buffer);
+}
+GL_APICALL void GL_APIENTRY glBindFramebuffer (GLenum target, GLuint framebuffer) {
+	return _glBindFramebuffer (target, framebuffer);
+}
+GL_APICALL void GL_APIENTRY glBindRenderbuffer (GLenum target, GLuint renderbuffer) {
+	return _glBindRenderbuffer (target, renderbuffer);
+}
+GL_APICALL void GL_APIENTRY glBindTexture (GLenum target, GLuint texture) {
+	return _glBindTexture (target, texture);
 }
 GL_APICALL void GL_APIENTRY glClear (GLbitfield mask) {
     return _glClear(mask);
@@ -73,6 +94,9 @@ GL_APICALL void GL_APIENTRY glDeleteProgram (GLuint program) {
 }
 GL_APICALL void GL_APIENTRY glDeleteShader (GLuint shader) {
     return _glDeleteShader(shader);
+}
+GL_APICALL void GL_APIENTRY glDisable (GLenum cap) {
+    return _glDisable(cap);
 }
 GL_APICALL void GL_APIENTRY glDrawArrays (GLenum mode, GLint first, GLsizei count) {
     return _glDrawArrays(mode, first, count);

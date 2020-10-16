@@ -2,6 +2,8 @@
 PSM Supplemented Mini GL ES
 
 This is simply a library to make using PSM's GLES implimentation easier.
+This potentially opens the door for more accessible, modern ports for the Vita. VitaGL is targeted towards the GL1 library of functions, and this has been a struggle
+for porting more modern games. While using PSM has proven to not be a good idea, the ability is here, and that's something to hope for.
 
 Offsets and what led us to finding this: https://forum.devchroma.nl/index.php/topic,285.0.html
 

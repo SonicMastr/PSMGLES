@@ -7,7 +7,7 @@ Offsets and what led us to finding this: https://forum.devchroma.nl/index.php/to
 
 When using, make sure the Modules in the "Dependencies" archive are in the directory `app0:Modules/`. Otherwise initialization will fail.
 
-Shader Compilation works btw.
+Shader Compilation works btw, but is limited to CG shaders. GLSL is not supported by the Vita's Runtime Shader Compiler
 
 ## Example
 And example for this can be found [Here](https://github.com/SonicMastr/PSMGLES-Sample)
